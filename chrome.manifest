@@ -1,0 +1,3 @@
+content	simplecolorpicker	chrome/content/
+overlay	chrome://browser/content/browser.xul	chrome://simplecolorpicker/content/overlay.xul
+skin	simplecolorpicker	classic/1.0	chrome/skin/

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet href="chrome://canvastest/content/canvasTest.css" type="text/css"?>
+<overlay id="myOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml">
+  <script type="application/x-javascript"
+	  src="chrome://simplecolorpicker/content/Simplecolorpicker.js" />
+  <popup id="contentAreaContextMenu">
+    <menu id="colorpicker-menu" class="menu-iconic" label="Color Picker" insertbefore="context-bookmarklink">
+      <menupopup>
+	<menuitem label="rgb" class="RGB" />
+	<menuitem label="hex" class="Hex" />
+      </menupopup>
+    </menu>
+    <menuseparator insertbefore="context-bookmarklink" />
+  </popup>
+  <statusbar id="status-bar">
+    <scrollbox width="1" height="1">
+      <html:canvas id="myCanvas" display="none" />
+    </scrollbox>
+  </statusbar>
+</overlay>
