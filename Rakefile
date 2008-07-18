@@ -36,8 +36,8 @@ task :create_extension_xpi => [:create_chrome_jar, :create_chrome_manifest, :cre
   install_rdf_file = File.new('install.rdf','r')
   install_rdf_xmldoc = Document.new(install_rdf_file)
   version_number = ""
-  install_rdf_xmldoc.elements.each('RDF/Description/em:version') do |element|
-    version_number = element.text
+  install_rdf_xmldoc.elements.each('(//RDF:Description)[2]') do |element|
+    version_number = element.attribute('em:version')
   end
 
   sh "cd #{BUILD_DIR} && zip -qr -9 ../../#{EXTENSION_NAME}-#{version_number}-fx.xpi *"
