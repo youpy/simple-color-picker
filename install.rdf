@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-    <Description about="urn:mozilla:install-manifest">
-        <em:id>{ee2c111f-42a1-416f-b3ff-1e086ee5221f}</em:id>
-        <em:name>SimpleColorPicker</em:name>
-        <em:version>0.1</em:version>
-        <em:type>2</em:type>
-        <em:description>Description about this extension</em:description>
-        <em:creator>somebody</em:creator>
-        <em:targetApplication>
-            <Description>
-                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-                <em:minVersion>1.5</em:minVersion>
-                <em:maxVersion>3.0.*</em:maxVersion>
-            </Description>
-        </em:targetApplication>
-    </Description>
-</RDF>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$FMQtH3"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="1.5"
+                   em:maxVersion="3.0.*" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="{ee2c111f-42a1-416f-b3ff-1e086ee5221f}"
+                   em:name="SimpleColorPicker"
+                   em:version="0.1"
+                   em:type="2"
+                   em:description="Description about this extension"
+                   em:creator="somebody"
+                   em:updateURL="http://github.com/youpy/simple-color-picker/tree/master/update.rdf?raw=true"
+                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC87xyarhSro5nzxyLTusE5hifH9JkQf5s2Fw0uFGVkPABqWw4xV2loA5455pTp/fPtmePORx9oilFZlENibx4xU1hpA/kqm8aF9x8qvmo0SQdbdcCiSQoinVsy/RdDw2BktY/P/sj4rfVYKTxkizn4tpSCrsxl6tx1cnv5nlcIaQIDAQAB">
+    <em:targetApplication RDF:resource="rdf:#$FMQtH3"/>
+  </RDF:Description>
+</RDF:RDF>
