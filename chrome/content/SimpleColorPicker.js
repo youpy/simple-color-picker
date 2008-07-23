@@ -47,7 +47,7 @@ window.addEventListener('load', function(e) {
     colorTypes.forEach(function(type) {
       menuItems[type].label = color['to' + type]();
       menuItems[type].addEventListener('command', function() {
-	gClipboardHelper.copyString(color['to' + type]());
+				gClipboardHelper.copyString(color['to' + type]());
       }, false);
     });
 
@@ -73,8 +73,8 @@ window.addEventListener('load', function(e) {
       return '#' + this.rgb.map(format).join('');
       
       function format(number) {
-	var hex = (number).toString(16);
-	return hex.length == 1 ? '0' + hex : hex;
+				var hex = (number).toString(16);
+				return hex.length == 1 ? '0' + hex : hex;
       }
     },
     get rgb() {
