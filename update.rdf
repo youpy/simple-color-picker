@@ -2,21 +2,21 @@
 <RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
          xmlns:NC="http://home.netscape.com/NC-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <RDF:Description RDF:about="urn:mozilla:extension:{ee2c111f-42a1-416f-b3ff-1e086ee5221f}"
-                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAEt8NzaqQ1uuHIrl+zOVcqRqy9eH39WwSUZcyjTDlvAKT+iZLlBNJkIM9uJL0VzH4h08wpCFgUVHi6tB5GuH+GQzToo2Rli5eXGf6IAFrctGNgGSN5JXjHFEa1b6jltU/OKar1tZtrJMftIQUxWKK0WKrAMOuUMYW2Z+mkoytqzJ">
-    <em:updates RDF:resource="rdf:#$KMQtH3"/>
-  </RDF:Description>
   <RDF:Seq RDF:about="rdf:#$KMQtH3">
     <RDF:li RDF:resource="rdf:#$LMQtH3"/>
   </RDF:Seq>
-  <RDF:Description RDF:about="rdf:#$OMQtH3"
-                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
-                   em:minVersion="2.0"
-                   em:maxVersion="3.0.*"
-                   em:updateHash="sha1:33e57712170c95dedfd86a2c36b3aeb49fa5e55b"
-                   em:updateLink="http://github.com/youpy/simple-color-picker/tree/master/SimpleColorPicker-0.1-fx.xpi?raw=true" />
   <RDF:Description RDF:about="rdf:#$LMQtH3"
                    em:version="0.1">
     <em:targetApplication RDF:resource="rdf:#$OMQtH3"/>
   </RDF:Description>
+  <RDF:Description RDF:about="urn:mozilla:extension:{ee2c111f-42a1-416f-b3ff-1e086ee5221f}"
+                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAFMZ69pQ2SDlo3cRIWMn+CTSRdSvafrGl/gXfhaiwv8QGdJG8UU6gmtR0tjYNDzRFMWKLJWE3LLjkgi7rq6pCeNKbr8VrFf63dFLZcp0/8L2QaBKkugig7ywGkJbB3i8wGTrVDsogtg6anYzuZZMTs1G3MypBMvOLXJ4mvRmwzvd">
+    <em:updates RDF:resource="rdf:#$KMQtH3"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$OMQtH3"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="2.0"
+                   em:maxVersion="3.0.*"
+                   em:updateHash="sha1:f2545f4dfbc87d017770b451cd732b3493d6af67"
+                   em:updateLink="http://github.com/youpy/simple-color-picker/tree/master/SimpleColorPicker-0.1-fx.xpi?raw=true" />
 </RDF:RDF>
