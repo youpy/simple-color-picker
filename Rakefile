@@ -1,6 +1,5 @@
 # based on: http://gravelog.blogspot.com/2007/03/using-rake-to-build-firefox-extensions_04.html
-require 'rexml/document'
-include REXML
+require 'nokogiri'
 
 EXTENSION_NAME="SimpleColorPicker"
 BUILD_DIR="build/#{EXTENSION_NAME}"
@@ -34,11 +33,10 @@ end
 desc "create the xpi file and use the version number in the file name"
 task :create_extension_xpi => [:create_chrome_jar, :create_chrome_manifest, :create_install_rdf] do
   install_rdf_file = File.new('install.rdf','r')
-  install_rdf_xmldoc = Document.new(install_rdf_file)
+  install_rdf_xmldoc = Nokogiri::XML(install_rdf_file)
   version_number = ""
-  install_rdf_xmldoc.elements.each('(//RDF:Description)[2]') do |element|
-    version_number = element.attribute('em:version')
-  end
+  e = install_rdf_xmldoc.xpath('(//RDF:Description)[2]')[0]
+  version_number = e['version']
 
   sh "cd #{BUILD_DIR} && zip -qr -9 ../../#{EXTENSION_NAME}-#{version_number}-fx.xpi *"
   rm_rf "build"
@@ -58,11 +56,11 @@ end
 
 def firefox_profile_dir(name = nil)
   name = 'default' unless name
-  
-  base = 
+
+  base =
     case RUBY_PLATFORM
     when /darwin/
-      '~/Library/Application Support/Firefox/profiles'
+      '~/Library/Application Support/Firefox/Profiles'
     when /win/
       '~/Application Data/Mozilla/Firefox/Profiles'
     else
@@ -79,10 +77,9 @@ def firefox_profile_dir(name = nil)
 end
 
 def extension_id
-  open('install.rdf','r') do |file|
-    install_rdf_xmldoc = Document.new(file)
-    install_rdf_xmldoc.elements.each('RDF/Description/em:id') do |element|
-      return element.text
-    end
+  open('install.rdf') do |file|
+    install_rdf_xmldoc = Nokogiri::XML(file)
+    e = install_rdf_xmldoc.xpath('(//RDF:Description)[2]')[0]
+    return e['id']
   end
 end
