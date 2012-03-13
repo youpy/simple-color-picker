@@ -5,11 +5,11 @@
   <RDF:Description RDF:about="rdf:#$FMQtH3"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="1.5"
-                   em:maxVersion="3.0.*" />
+                   em:maxVersion="11.0.0" />
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="{ee2c111f-42a1-416f-b3ff-1e086ee5221f}"
                    em:name="SimpleColorPicker"
-                   em:version="0.1"
+                   em:version="0.2"
                    em:type="2"
                    em:description="Description about this extension"
                    em:creator="somebody"

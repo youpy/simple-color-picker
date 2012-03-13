@@ -45,7 +45,7 @@ window.addEventListener('load', function(e) {
     contextMenu.style.listStyleImage = 'url(' + canvas.toDataURL('image/png') + ')';
 
     colorTypes.forEach(function(type) {
-      menuItems[type].label = color['to' + type]();
+      menuItems[type].setAttribute('label', color['to' + type]());
       menuItems[type].addEventListener('command', function() {
 				gClipboardHelper.copyString(color['to' + type]());
       }, false);
@@ -58,7 +58,7 @@ window.addEventListener('load', function(e) {
     this.r = r;
     this.g = g;
     this.b = b;
-  }
+  };
 
   Color.fromImageData = function(imageData) {
     var [r, g, b] = imageData.data;
@@ -80,5 +80,5 @@ window.addEventListener('load', function(e) {
     get rgb() {
       return [this.r, this.g, this.b];
     }
-  }
+  };
 }, false);
